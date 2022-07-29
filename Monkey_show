@@ -1,0 +1,46 @@
+#!/bin/bash
+#echo "
+#     _   _   _   _   _   _   _   _   _
+#    / \ / \ / \ / \ / \ / \ / \ / \ / \
+#    Pornifier - Random Porn Every 5 min
+#    \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+#
+#"
+#For the laughs only :) regard Zappit
+
+sleep 1
+
+
+while :
+do
+        echo "    Opening A Random PornHub Video Every 5 minutes
+        "
+
+                firefox https://www.pornhub.com/video/random
+                        echo "
+       -=Press <CTRL+C> to exit=-
+                        "
+
+
+ hour=0
+ min=0
+ sec=30
+        while [ $hour -ge 0 ]; do
+                 while [ $min -ge 0 ]; do
+                         while [ $sec -ge 0 ]; do
+   echo -ne "        Next Video In: $min:$sec\033[0K\r"
+                                 let "sec=sec-1"
+                                 sleep 1
+                         done
+                         sec=59
+                         let "min=min-1"
+                 done
+                 min=59
+                 let "hour=hour-1"
+         done
+
+clear
+
+done
+
+#modify with lynx - enjoy
